@@ -9,4 +9,5 @@ int print_char(va_list val);
 int print_str(va_list val);
 int _strlen(char *s);
 int _strlens(const char *s);
+int print_dec(va_list args);
 #endif
