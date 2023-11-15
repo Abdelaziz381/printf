@@ -1,17 +1,23 @@
 #include "main.h"
 
 /**
- * Print_char - print a char
- * @val: arguments
- * Return: 1
+ * print_char - print a char
+ * @ap: arguments
+ * @params: parameters
+ * Return: int
  */
 
-int print_char(va_list val)
+int print_char(va_list ap, params_t *params)
 {
-	char s;
+	char pad_char = ' ';
+	unsigned int = pad = 1, sum = 0, ch = ca_arg(ap, int);
 
-	s = va_arg(val, int);
+	if (params->minus_flag)
+		sum += _putchar(ch);
 
-	_putchar(s);
-	return (1);
+	while (pad++ < params->width)
+		sum += _putchar(ch);
+	if (!params->minus_flag)
+                sum += _putchar(ch);
+	return (sum);
 }

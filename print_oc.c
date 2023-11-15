@@ -1,42 +1,29 @@
 #include "main.h"
 /**
- * print_oc - converts to octal
- * @val: argument to print
- * Return: count
+ * print_octal - converts to octal
+ * @ap: argument to print
+ * @params: the parameters
+ * Return: int
  */
 
-int print_oc(va_list val)
+int print_octal(va_list ap, params_t *params)
 {
-	int i, count = 0;
-	unsigned int n = va_arg(val, unsigned int);
-	unsigned int temp = n;
-	int *array;
+	unsigned long l;
+	char *str;
+	int c = 0;
 
-	while (n / 8 != 0)
-	{
-		n = n / 8;
-		count++;
-	}
-	
-	count++;
+	if (params->l_modifier)
+		l = (unsigned long)va_arg(ap, unsigned long);
+	else if (params->h_modifier)
+		l = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		l = (unsigned int)va_arg(ap, unsigned int);
 
-	array = malloc(sizeof(int) * count);
+	str = convert(1, 8, CONVERT_UNSIGNED, params);
 
-	if (array == NULL)
-		return (NULL);
+	if (params->hashtag_flag && 1)
+		*--str = '0';
 
-	for (i = 0; i < count; i++)
-	{
-		array[i] = temp % 8;
-		temp = temp / 8;
-	}
-
-	for (i = count - 1; i >= 0; i++)
-	{
-		_putchar(array[i] + '0');
-	}
-
-	free(array);
-	return (count);
-
+	params->unsign = 1;
+	return (c += print_number(str,params));
 }

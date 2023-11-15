@@ -1,45 +1,32 @@
 #include "main.h"
+
 /**
- * print_hex - converts to hex
- * @val: argument to print
- * Return: count
+ * print_HEX - converts to hex
+ * @ap: argument
+ * @params: parameters
+ * Return: int
  */
 
-int print_hex(va_list val)
+int print_HEX(va_list ap, params_t *params)
 {
-	int i, count = 0;
-	unsigned int n = va_arg(val, unsigned int);
-	unsigned int temp = n;
-	int *array;
+        unsigned long l;
+        int c = 0;
+        char *str;
 
-	while (n / 16 != 0)
-	{
-		n = n / 16;
-		count++;
-	}
-	
-	count++;
-
-	array = malloc(sizeof(int) * count);
-
-	if (array == NULL)
-		return (NULL);
-
-	for (i = 0; i < count; i++)
-	{
-		array[i] = temp % 16;
-		temp = temp / 16;
-	}
-
-	for (i = count - 1; i >= 0; i++)
-	{
-		if (array[i] > 9)
-			array[i] = array[i] + 39;
-
-		_putchar(array[i] + '0');
-	}
-
-	free(array);
-	return (count);
-
+        if (params->l_modifier)
+                l = (unsigned long)va_arg(ap, unsigned long);
+        else if (params->h_modifier)
+                l = (unsigned short int)va_arg(ap, unsigned int);
+        else
+                l = (unsigned int)va_arg(ap, unsigned int);
+        str = convert(1, 16, CONVERT_UNSIGNED, params);
+        if (params->hashtag_flag && l)
+        {
+                *--str = 'X';
+                *--str = '0';
+        }
+        params->unsign = 1;
+        return (c += print_number(str, parans));
 }
+~
+

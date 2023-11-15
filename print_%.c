@@ -1,12 +1,15 @@
 #include  "main.h"
 
 /**
- * print_% - prints %
+ * print_percent - prints %
+ * @ap: arguments
+ * @params: parameters
  * Return: int;
  */
 
-int print_37(void)
+int print_percent(va_list ap, params_t *params)
 {
-	_putchar(37);
-	return (1);
+	(void)ap;
+	(void)params;
+	return (_putchar('%'));
 }
