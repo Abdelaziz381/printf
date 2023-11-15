@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 
 	for (p = (char *) format; *p; p++)
 	{
-		init_params(&params ap);
+		init_params(&params, ap);
 		if(*p != '%')
 		{
 			sum += _putchar(*p);
