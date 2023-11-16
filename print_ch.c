@@ -18,6 +18,6 @@ int print_char(va_list ap, params_t *params)
 	while (pad++ < params->width)
 		sum += _putchar(pad_char);
 	if (!params->minus_flag)
-                sum += _putchar(ch);
+		sum += _putchar(ch);
 	return (sum);
 }
