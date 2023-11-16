@@ -11,11 +11,11 @@ int print_hex(va_list ap, params_t *params)
 	unsigned long l;
 	int c = 0;
 	char *str;
-	
+
 	if (params->l_modifier)
 		l = (unsigned long)va_arg(ap, unsigned long);
 	else if (params->h_modifier)
-                l = (unsigned short int)va_arg(ap, unsigned int);
+		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
 	str = convert(1, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
