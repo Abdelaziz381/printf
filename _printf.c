@@ -5,7 +5,6 @@
  * @format: format string
  * Return: sum
  */
-
 int _printf(const char *format, ...)
 {
 	va_list ap;
