@@ -72,13 +72,13 @@ int get_flag(char *s, params_t *params)
 			break;
 		case ' ':
 			i = params->space_flag = 1;
-			  break;
+			break;
 		case '#':
 			i = params->hashtag_flag = 1;
-                        break;
+			break;
 		case '-':
 			i = params->minus_flag = 1;
-                        break;
+			break;
 		case '0':
 			i = params->zero_flag = 1;
 			break;
@@ -102,16 +102,16 @@ int get_modifier(char *s, params_t *params)
 	{
 		case 'h':
 			i = params->h_modifier = 1;
-			  break;
+			break;
 		case '1':
 			i = params->l_modifier = 1;
-			  break;
+			break;
 	}
 	return (i);
 }
 
 /**
- * git_width - format string width
+ * get_width - format string width
  * @s: format string
  * @params: parameters
  * @ap: argumets
