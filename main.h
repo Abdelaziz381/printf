@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _PRINTF_H
+#define _PRINTF_H
 
 #include <stdarg.h>
 #include <stddef.h>
@@ -35,12 +35,6 @@
  * @h_modifier: if h_modifier is specified
  * @l_modifier: if l_modifier is specified
  */
-
-
-/**
- * Abdelaziz
- */
-
 
 typedef struct parameters
 {
@@ -127,7 +121,6 @@ void init_params(params_t *params, va_list ap);
 
 char *get_precision(char *p, params_t *params, va_list ap);
 
-/* _printf.c */
 
 int _printf(const char *format, ...);
 #endif
