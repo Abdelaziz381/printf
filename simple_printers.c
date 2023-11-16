@@ -40,7 +40,7 @@ int print_rev(va_list ap, params_t *params)
 			len++;
 		str--;
 
-		for (; len > 0; len--,str--)
+		for (; len > 0; len--, str--)
 			sum += _putchar(*str);
 	}
 	return (sum);
@@ -57,7 +57,7 @@ int print_rot13(va_list ap, params_t *params)
 {
 	int i, index;
 	int count = 0;
-	char arr[] = 
+	char arr[] =
 		"NOPQRSTUVWXYZABCEDFGHIJKLM	nopqrstuvwxyzabcdefghijklm";
 	char *a = va_arg(ap, char *);
 	(void)params;

@@ -5,7 +5,6 @@
  * @c: The character to print
  *
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
  */
 int _putchar(int c)
 {
@@ -24,8 +23,8 @@ int _putchar(int c)
 
 /**
  * _puts - prints string
- * @str: string
- * @Return: void
+ * @str: string printed
+ * @Return: char
  */
 
 int _puts(char *str)

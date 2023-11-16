@@ -67,16 +67,21 @@ int get_flag(char *s, params_t *params)
 
 	switch (*s)
 	{
-		case '+': i = params->plus_flag = 1;
+		case '+':
+			i = params->plus_flag = 1;
 			break;
-		case ' ': i = params->space_flag = 1;
+		case ' ':
+			i = params->space_flag = 1;
 			  break;
-		case '#': i = params->hashtag_flag = 1;
+		case '#':
+			i = params->hashtag_flag = 1;
                         break;
-		case '-': i = params->minus_flag = 1;
+		case '-':
+			i = params->minus_flag = 1;
                         break;
-		case '0': i = params->zero_flag = 1;
-                        break;
+		case '0':
+			i = params->zero_flag = 1;
+			break;
 	}
 	return (i);
 }
@@ -95,10 +100,12 @@ int get_modifier(char *s, params_t *params)
 
 	switch (*s)
 	{
-		case 'h': i = params->h_modifier = 1;
+		case 'h':
+			i = params->h_modifier = 1;
 			  break;
-		case '1': i = params->l_modifier = 1;
-                        break;
+		case '1':
+			i = params->l_modifier = 1;
+			  break;
 	}
 	return (i);
 }
