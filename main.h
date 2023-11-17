@@ -36,6 +36,8 @@
  * @l_modifier: if l_modifier is specified
  */
 
+int _printf(const char *format, ...);
+
 typedef struct parameters
 {
 	unsigned int unsign : 1;
@@ -83,6 +85,7 @@ int print_s(va_list ap, params_t *params);
 char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
+
 
 /* specifier func */
 

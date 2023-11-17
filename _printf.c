@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _printf - printf function
+ * _printf - prints everything
  * @format: format string
  * Return: sum
  */

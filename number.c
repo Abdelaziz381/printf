@@ -30,7 +30,7 @@ char *convert(long int num, int base, int flags, params_t *params)
 
 	do {
 		*--ptr = array[n % base];
-	n /= base;
+		n /= base;
 	} while (n != 0);
 
 	if (sign)
