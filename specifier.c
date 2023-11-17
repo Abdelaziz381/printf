@@ -3,7 +3,7 @@
 /**
  * get_specifier - find format func
  * @s: format string
- * Return: int
+ * Return: NULL
  */
 
 int (*get_specifier(char *s))(va_list ap, params_t *params)
