@@ -26,7 +26,7 @@ int print_string(va_list ap, params_t *params)
 	if (params->minus_flag)
 	{
 		if (params->precision != UINT_MAX)
-			for (i = 0; pad > 1; i++)
+			for (i = 0; i < pad; i++)
 				sum += _putchar(*str++);
 		else
 			sum += _puts(str);
