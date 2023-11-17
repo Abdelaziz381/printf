@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_str - print a string
+ * print_string - print a string
  * @ap: arguments
  * @params: parameters
  *
  * Return: string lenght
  */
 
-int print_str(va_list ap, params_t *params)
+int print_string(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
 	unsigned int pad = 0, sum = 0, i = 0, j;
