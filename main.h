@@ -85,7 +85,7 @@ int print_percent(va_list ap, params_t *params);
 char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
-
+int print_S(va_list ap, params_t *params);
 
 /* specifier func */
 
