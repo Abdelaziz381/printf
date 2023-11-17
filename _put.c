@@ -22,9 +22,9 @@ int _putchar(int c)
 }
 
 /**
- * _puts - prints a string
- * @str: The string to be printed
- * @Return: Number of characters printed
+ * _puts - prints a string with newline
+ * @str: The string to print
+ * Return: void
  */
 
 int _puts(char *str)
