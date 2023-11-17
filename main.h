@@ -76,7 +76,7 @@ int _putchar(int c);
 
 int print_char(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
-int print_string(va_list ap, params_t *params);
+int print_str(va_list ap, params_t *params);
 int print_percent(va_list ap, params_t *params);
 int print_s(va_list ap, params_t *params);
 
