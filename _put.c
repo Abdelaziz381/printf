@@ -24,7 +24,7 @@ int _putchar(int c)
 /**
  * _puts - prints a string with newline
  * @str: The string to print
- * Return: void
+ * Return: string
  */
 
 int _puts(char *str)
