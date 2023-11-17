@@ -36,7 +36,6 @@
  * @l_modifier: if l_modifier is specified
  */
 
-int _printf(const char *format, ...);
 
 typedef struct parameters
 {
@@ -124,6 +123,8 @@ void init_params(params_t *params, va_list ap);
 
 char *get_precision(char *p, params_t *params, va_list ap);
 
-
+/* printf function */
 int _printf(const char *format, ...);
+
+
 #endif
