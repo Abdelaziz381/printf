@@ -22,9 +22,9 @@ int _putchar(int c)
 }
 
 /**
- * _puts - prints string
- * @str: string printed
- * @Return: char
+ * _puts - prints char
+ * @str: char printed
+ * @Return: str - x
  */
 
 int _puts(char *str)
