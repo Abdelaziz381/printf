@@ -21,14 +21,12 @@
 
 /**
  * struct parameters - parameters struct
- * 
  * @unsign: flag if unsigned value
  * @plus_flag: if plus_flag specified
  * @space_flag: if _flag specified
  * @hastag_flag: if hastag_flag specified
  * @zero_flag: if 0_flag specified
  * @minus_flag: if -_flag specified
- *
  * @width: field width specified
  * @precision: field precision specified
  *
@@ -40,7 +38,6 @@
 typedef struct parameters
 {
 	unsigned int unsign : 1;
-	
 	unsigned int plus_flag : 1;
 	unsigned int space_flag : 1;
 	unsigned int hashtag_flag : 1;
